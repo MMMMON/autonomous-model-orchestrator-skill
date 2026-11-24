@@ -21,6 +21,7 @@
 3. **第三梯队：网页 Perplexity 调研导师 (Live Docs & Claude Sonnet / Thinking)**
    - **适用**：涉及最新外部第三方库（防 API 幻觉）、实时官方文档检索、需要 Claude Sonnet 5.5 或 Kimi Thinking 进行多视角严格审查的代码方案。
    - **调度**：自动通过浏览器子智能体调用 Perplexity Pro，提取最新技术引用与代码框架，在本地沙箱编译测试。
+   - **模式禁令**：调用 Perplexity 时**严禁开启或使用其 'Computer' 功能/模式**，必须始终使用常规 '搜索' 或纯模型对话，确保 Computer 模式全程保持关闭。
 
 ## 闭环验证原则 (Closed-Loop Guarantee)
 - 无论由哪个模型出具方案，落地后必须在本地进行运行和测试验证；

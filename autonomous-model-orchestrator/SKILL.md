@@ -61,6 +61,7 @@ When receiving a task, inform the user in one sentence which route was selected:
 - Reuses authenticated browser sessions (`agent-tab-1` or existing browser subagent).
 - Maintains session cookies without logging out.
 - Structures prompts cleanly with project context, environment constraints, and request for executable code blocks.
+- **Perplexity Mode Rule**: When routing to Perplexity, strictly **do NOT invoke or enable the 'Computer' mode**; only standard 'Search' (搜索) or model dialogue (e.g. Claude Sonnet 5.5, Kimi Thinking) must be used.
 
 ### 3. Local Implementation & Grounding
 - Uses `write_file` or `edit_file` to apply modifications.
