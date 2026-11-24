@@ -62,8 +62,16 @@ When receiving a task, inform the user in one sentence which route was selected:
 - Maintains session cookies without logging out.
 - Structures prompts cleanly with project context, environment constraints, and request for executable code blocks.
 - **Perplexity Mode Rule**: When routing to Perplexity, strictly **do NOT invoke or enable the 'Computer' mode**; only standard 'Search' (搜索) or model dialogue (e.g. Claude Sonnet 5.5, Kimi Thinking) must be used.
+- **Deep Research Highly Encouraged**: For comprehensive architectural investigations, multi-framework trade-off studies, or complex library research, actively enable and encourage **Gemini Deep Research (深入研究)** and **Perplexity Deep Research (研究模式)** to obtain multi-source synthesis and comprehensive implementation blueprints.
 
 ### 3. Local Implementation & Grounding
 - Uses `write_file` or `edit_file` to apply modifications.
 - Runs verification commands in standard sandbox mode.
 - If runtime errors occur, captures standard error outputs and performs automated closed-loop recovery with the mentor.
+
+### 4. Autonomous Quota Fallback (Pre-Authorized)
+The user has granted blanket pre-authorization. If any model encounters quota exhaustion, rate limits, or temporary downtime, **DO NOT interrupt or ask the user for permission**. Immediately switch to a comparable alternative model:
+- **Web Gemini Quota Exhausted**: Fall back immediately to Perplexity Pro with **Kimi K3 (Thinking)**, **GLM 5.3 (Thinking)**, or **Claude Sonnet 5.5**.
+- **Perplexity Claude Sonnet Quota Exhausted**: Fall back immediately to **GPT-6.2 Sol**, **Best model**, or switch to **Web Gemini Advanced**.
+- **Deep Research Quota Exhausted**: Fall back to the respective platform's Thinking model with structured multi-turn prompting.
+- **Zero Interruption**: State the switch transparently in one sentence (e.g., *"Detected model quota limit; automatically falling back to Kimi K3 Thinking..."*) and continue execution without waiting for confirmation.
