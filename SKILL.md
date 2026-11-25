@@ -75,3 +75,8 @@ The user has granted blanket pre-authorization. If any model encounters quota ex
 - **Perplexity Claude Sonnet Quota Exhausted**: Fall back immediately to **GPT-6.2 Sol**, **Best model**, or switch to **Web Gemini Advanced**.
 - **Deep Research Quota Exhausted**: Fall back to the respective platform's Thinking model with structured multi-turn prompting.
 - **Zero Interruption**: State the switch transparently in one sentence (e.g., *"Detected model quota limit; automatically falling back to Kimi K3 Thinking..."*) and continue execution without waiting for confirmation.
+
+### 5. Project & Session Categorization (Anti-Clutter Protocol)
+Strictly avoid creating scattered, single-turn unorganized threads on web AI platforms:
+- **Perplexity Projects Integration**: Always navigate to or create a dedicated **Project (项目)** in Perplexity's sidebar matching the local project name (e.g., `Gemini Antigravity`). Group all technical searches, Deep Research reports, and Claude reviews within this project space.
+- **Gemini Thread Reuse & Naming**: Maintain context continuity by reusing designated project session threads rather than spawning multiple disjoint chats. Use standardized thread naming (e.g., `[ProjectName] Architecture & Design`) to keep the web interface structured and tidy.
